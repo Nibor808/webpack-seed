@@ -1,3 +1,1 @@
-import css from '../scss/main.scss'
-
-console.log("hey");
+require('../scss/materialize.scss');

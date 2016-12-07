@@ -3,7 +3,7 @@
 
 1) clone the repo to a local directory
 
-2) ensure that node is installed on you system ("node --version") if not visit [node js]("https://nodejs.org/en/")
+2) ensure that node is installed on you system ("node --version") if not visit [node js](https://nodejs.org/en/)
 
 3) type "npm install" from inside the directory
 

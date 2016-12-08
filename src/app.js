@@ -3,15 +3,15 @@ import exhbs from 'express-handlebars';
 import bodyParser from 'body-parser';
 import env from 'node-env-file';
 
-env('./.env', {logger: console});
+env('./config/.env', {logger: console});
 
 const app = express();
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
-app.use(express.static(`${__dirname}/public`));
+app.use(express.static(`${__dirname}/../public`));
 
-app.set('views', `${__dirname}/src/views`);
+app.set('views', `${__dirname}/views`);
 app.engine('.hbs', exhbs({
   defaultLayout: 'main',
   extname: '.hbs',
@@ -20,8 +20,8 @@ app.engine('.hbs', exhbs({
 }));
 app.set('view engine', '.hbs');
 
-require('./src/routes/root')(app);
-require('./src/routes/user')(app);
+require('routes/root')(app);
+require('routes/user')(app);
 
 
 app.listen(process.env.PORT, () => {

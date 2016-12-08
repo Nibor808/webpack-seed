@@ -4,11 +4,11 @@ const ETPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: {
-    main: './src/scripts/index.js',
+    main: path.join(__dirname, '../src/scripts/index.js'),
     vendor: ['jquery', 'materialize-css']
   },
   output: {
-    path: path.join(__dirname, 'public/build'),
+    path: path.join(__dirname, '../public/build'),
     filename: '[name].js',
     publicPath: '/build/'
   },

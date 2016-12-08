@@ -8,7 +8,7 @@
 3) type "npm install" from inside the directory
 
 ### Running
-1) type "npm run all" from inside the directory
+1) type "npm run dev" from inside the directory
 
 2) open your browser to localhost:3000
 

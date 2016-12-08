@@ -2,13 +2,14 @@
   "name": "webpack",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "express-handlebars": "^3.0.0",
     "jquery": "^3.1.1",
-    "materialize-css": "^0.97.8"
+    "materialize-css": "^0.97.8",
+    "node-env-file": "^0.1.8"
   },
   "devDependencies": {
     "babel": "^6.5.2",
@@ -16,10 +17,13 @@
     "babel-loader": "^6.2.8",
     "babel-preset-es2015": "^6.18.0",
     "css-loader": "^0.26.0",
+    "eslint": "^3.11.1",
+    "eslint-watch": "^2.1.14",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
     "json-loader": "^0.5.4",
     "node-sass": "^3.13.0",
+    "nodemon": "^1.11.0",
     "parallelshell": "^2.0.0",
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
@@ -33,9 +37,7 @@
   },
   "scripts": {
     "error": "webpack --display-error-details",
-    "start": "babel-node --harmony app.js",
-    "watch": "webpack -w",
-    "all": "parallelshell 'npm run watch' 'npm run start'"
+    "dev": "./bin/dev.sh"
   },
   "author": "",
   "license": "ISC"

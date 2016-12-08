@@ -1,10 +1,11 @@
 import express from 'express';
 import exhbs from 'express-handlebars';
 import bodyParser from 'body-parser';
-import path from 'path';
+import env from 'node-env-file';
+
+env('./.env', {logger: console});
 
 const app = express();
-const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
@@ -23,6 +24,6 @@ require('./src/routes/root')(app);
 require('./src/routes/user')(app);
 
 
-app.listen(PORT, () => {
-  console.log(`Listening on port ${PORT}`);
-})
+app.listen(process.env.PORT, () => {
+  console.log(`Listening on port ${process.env.PORT}`);
+});

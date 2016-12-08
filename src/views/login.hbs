@@ -14,7 +14,10 @@
         </div>
       </div>
       <button class="btn waves-effect" type="submit" name="action">sign in
-        <i class="tiny material-icons right">send</i>
+        <i class="material-icons right">send</i>
       </button>
+       {{#if error}}
+         <label>{{error}}</label>
+       {{/if}}
     </form>
   </div>

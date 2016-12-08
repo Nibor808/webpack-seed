@@ -6393,12 +6393,21 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
     margin-bottom: 5em; } }
 
 body {
-  background: #F7F9FA;
+  background-color: #F7F9FA;
   color: #444; }
 
 .nav-wrapper {
-  background-color: #F7F9FA; }
+  background-color: #A1D490;
+  padding-left: 20px;
+  padding-right: 20px; }
   .nav-wrapper .brand-logo {
-    color: #90C3D4; }
+    color: #915AA3; }
+  .nav-wrapper .dropdown-content > li > a {
+    color: #915AA3; }
+
+.btn, .btn-large {
+  color: #FFF;
+  background-color: #90C3D4;
+  text-transform: none; }
 
 /*# sourceMappingURL=style.css.map*/

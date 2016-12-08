@@ -1,7 +1,7 @@
 ## Basic Webpack setup for Node JS with Sass & Handlebars
 ### Install Instructions
 
-1) clone the repo to a local directory
+1) clone or download the repo to a local directory
 
 2) ensure that node is installed on you system ("node --version") if not visit [node js](https://nodejs.org/en/)
 

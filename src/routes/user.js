@@ -7,7 +7,7 @@ module.exports = (app) => {
     if (user.password === '' || user.userName === '') {
       res.render('login', {error: 'you are missing some info'});
     }else {
-      read('users', {userName: user.userName})
+      readWhere('users', {userName: user.userName})
         .then((data) => {
           if(data.length == 0) {
             res.render('login', {error: 'incorrect user name or password'});

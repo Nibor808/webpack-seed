@@ -13,4 +13,4 @@ node_modules
 .sass-cache
 .eslintcache
 .DS_Store
-.env
+config/.env

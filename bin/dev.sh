@@ -13,6 +13,8 @@ LINT_CMD="esw \
   --color \
   --watch"
 
+npm run db:migrate
+
 echo $DEV_SERVER_CMD
 parallelshell "$DEV_SERVER_CMD" "$WEBPACK_CMD" "$LINT_CMD"
 

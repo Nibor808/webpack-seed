@@ -19,11 +19,11 @@
 ### Running
 1) type "npm run dev" from inside the directory to build database table 'users' and run webpack
 
-2) type "npm run db:seed-user" to insert a user 'Test Test' with a user name = 't_test' and password = 'password'
+2) type "npm run db:seed-user" to insert a user 'Test Test'
 
-3) open your browser to localhost:3000
+3) open your browser to localhost:(the value of the port variable defined in config/.env)
 
-4) login with user Test
+4) login with user Test Test, user name = 't_test' and password = 'password'
 
 ## Current Abilities
 1) able to sign in and pass sign in info to next page through routes, a database query and handlebars variables

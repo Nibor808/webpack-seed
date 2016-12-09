@@ -21,7 +21,7 @@
 
 2) hit control+c to exit the app
 
-3) type "npm run db:seed-user" to insert a user 'Test Test'
+3) type "npm run db:seed-user" to insert a user 'Test Test' in the database 'test'
 
 4) type "npm run dev" to re-initiate the app
 

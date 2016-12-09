@@ -26,6 +26,6 @@
 4) login with user Test
 
 ## Current Abilities
-1) able to sign in and pass sign in info to next page through routes and handlebars variables
+1) able to sign in and pass sign in info to next page through routes, a database query and handlebars variables
 
 

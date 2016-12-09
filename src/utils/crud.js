@@ -3,7 +3,7 @@ import db from './db';
 module.exports = {
 
   read(table) {
-    return db.select().from (table);
+    return db.select().from(table);
   },
 
   readWhere(table, values) {

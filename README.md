@@ -25,7 +25,7 @@
 
 4) type "npm run dev" to re-initiate the app
 
-5) open your browser to localhost:(the value of the port variable defined in config/.env)
+5) open your browser to localhost:(the value of the PORT variable defined in config/.env)
 
 6) login with user Test Test, user name = 't_test' and password = 'password'
 

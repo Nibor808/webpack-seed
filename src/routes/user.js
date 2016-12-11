@@ -1,4 +1,4 @@
-import {read} from '../utils/crud';
+import {readWhere} from '../utils/crud';
 
 module.exports = (app) => {
 
@@ -9,7 +9,7 @@ module.exports = (app) => {
     }else {
       readWhere('users', {userName: user.userName})
         .then((data) => {
-          if(data.length == 0) {
+          if(data.length == 0 || data.password != user.password) {
             res.render('login', {error: 'incorrect user name or password'});
           }else {
             res.render('index', {

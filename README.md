@@ -35,4 +35,6 @@
 ## Current Abilities
 1) able to sign in and pass sign in info to next page through routes, a database query and handlebars variables
 
+2) able to sign in to admin backend to view all users
+
 

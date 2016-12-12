@@ -46,7 +46,7 @@ $logo-color: #915AA3;
 $nav-color: #A1D490;
 $button-color: #FFF;
 $button-backgorund-color: #90C3D4;
-$font-color: #4F4F4F;
+$font-color: #666666;
 
 body {
   background-color: $background-color;
@@ -55,6 +55,10 @@ body {
 
 p {
   color: $font-color;
+}
+
+.navbar-fixed {
+  margin-bottom: 50px;
 }
 
 .nav-wrapper {

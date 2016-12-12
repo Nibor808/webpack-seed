@@ -6397,7 +6397,10 @@ body {
   color: #444; }
 
 p {
-  color: #4F4F4F; }
+  color: #666666; }
+
+.navbar-fixed {
+  margin-bottom: 50px; }
 
 .nav-wrapper {
   background-color: #A1D490;

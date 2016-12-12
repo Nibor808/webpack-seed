@@ -30,11 +30,11 @@
 
 6) login with user Admin User, user name = 'a_user' and password = 'password' or Regular User user name='r_user' password='password'
 
-7) once logged in you can select 'Admin' from the dropdown menu that will only allow Admin User to login
+7) if logged in as 'a_user' you can select 'Admin' from the dropdown menu
 
 ## Current Abilities
 1) able to sign in and pass sign in info to next page through routes, a database query and handlebars variables
 
-2) able to sign in to admin backend to view all users
+2) able to sign in as admin user to view all users
 
 

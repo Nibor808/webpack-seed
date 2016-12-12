@@ -2,6 +2,6 @@
 module.exports = (app) => {
 
   app.get('/', (req, res) => {
-    res.render('login');
+    res.render('login', {loggedIn: false});
   });
 };

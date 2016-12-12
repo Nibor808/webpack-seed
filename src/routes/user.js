@@ -9,11 +9,12 @@ module.exports = (app) => {
     }else {
       readWhere('users', {userName: user.userName})
         .then((data) => {
-          if(data.length == 0 || data.password != user.password) {
+          if(data.length == 0 || data[0].password != user.password) {
             res.render('login', {error: 'incorrect user name or password'});
           }else {
             res.render('index', {
-              name: `${data[0].firstName} ${data[0].lastName}`
+              name: `${data[0].firstName} ${data[0].lastName}`,
+              loggedIn: true
             });
           }
         });

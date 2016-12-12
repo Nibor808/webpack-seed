@@ -2,17 +2,21 @@
   <nav>
     <div class="nav-wrapper">
       {{#if admin}}
-      <a href="#" class="brand-logo">DEMO - Admin</a>
+        <a href="/admin" class="brand-logo">DEMO - Admin</a>
       {{/if}}
-      <a href="#" class="brand-logo">DEMO</a>
+        <a href="/workspace" class="brand-logo">DEMO</a>
       {{#if loggedIn}}
-      <a href="#!" class="dropdown-button right hide-on-med-and-down" data-activates="nav-dropdown">
-        menu<i class="material-icons right">arrow_drop_down</i>
-      </a>
+        <a href="#!" class="dropdown-button right hide-on-med-and-down" data-activates="nav-dropdown">
+          menu<i class="material-icons right">arrow_drop_down</i>
+        </a>
       {{/if}}
       <ul id="nav-dropdown" class="dropdown-content">
-        <li><a href="/admin">Admin</a></li>
-        <li><a href="/workspace">Workspace</a></li>
+        {{#if isAdmin}}
+          <li><a href="/admin">Admin</a></li>
+        {{/if}}
+        {{#if workspace}}
+          <li><a href="/workspace">Workspace</a></li>
+        {{/if}}
         <li><a href="/logout">Logout</a></li>
       </ul>
     </div>

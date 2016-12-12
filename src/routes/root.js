@@ -2,7 +2,6 @@
 module.exports = (app) => {
 
   app.get('/', (req, res) => {
-    req.session.userName = '';
     res.render('login', {loggedIn: false});
   });
 
@@ -10,26 +9,29 @@ module.exports = (app) => {
     if(req.session.userName == undefined && req.session.adminName == undefined) {
       res.render('oops');
     }else {
+      let isAdmin;
+      if(req.session.adminName) {
+        isAdmin = true;
+      }
       res.render('workspace', {
         loggedIn: true,
-        name: req.session.userName || req.session.adminName
+        name: req.session.userName || req.session.adminName,
+        isAdmin
       });
     }
   });
 
   app.get('/admin', (req, res) => {
-    req.session.adminName = '';
-    res.render('admin', {
-      loggedIn: false,
-      admin: true
-    });
+    if(req.session.adminName) {
+      res.render('admin', {
+        name: req.session.adminName,
+        loggedIn: true,
+        admin: true,
+        workspace: true
+      });
+    }else {
+      res.render('oops', {admin: true});
+    }
   });
 
-  app.get('/logout', (req, res) => {
-    req.session.userName = '';
-    req.session.adminName = '';
-    delete req.session.userName;
-    delete req.session.adminName;
-    res.render('login', {loggedIn: false});
-  });
 };

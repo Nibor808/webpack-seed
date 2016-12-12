@@ -27,7 +27,7 @@ app.engine('.hbs', exhbs({
 app.set('view engine', '.hbs');
 
 require('routes/root')(app);
-require('routes/user')(app);
+require('routes/session')(app);
 require('routes/admin')(app);
 
 

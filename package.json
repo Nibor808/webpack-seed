@@ -5,9 +5,9 @@
   "main": "app.js",
   "dependencies": {
     "body-parser": "^1.15.2",
-    "cookie-parser": "^1.4.3",
     "express": "^4.14.0",
     "express-handlebars": "^3.0.0",
+    "express-session": "^1.14.2",
     "jquery": "^3.1.1",
     "knex": "^0.12.6",
     "materialize-css": "^0.97.8",
@@ -43,7 +43,7 @@
     "db:migrate": "./bin/migrate.sh latest",
     "db:rollback": "./bin/migrate.sh rollback",
     "db:make_migration": "./bin/migrate.sh make",
-    "db:seed-user": "./bin/seed-user.sh"
+    "db:seed": "./bin/seed-user.sh"
   },
   "author": "",
   "license": "ISC"

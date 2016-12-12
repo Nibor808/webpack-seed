@@ -15,19 +15,22 @@
 * DB_USER= your user name for your local mysql instance
 * DB_PASS= your password for your local mysql instance
 * DB_NAME='test'
+* SESSION_SECRET=any random string
 
 ### Running
 1) type "npm run dev" from inside the directory to build database table 'users' and run webpack
 
 2) hit control+c to exit the app
 
-3) type "npm run db:seed-user" to insert a user 'Test Test' into the users table in database 'test'
+3) type "npm run db:seed" to insert a users 'Admin User' and 'Regular User' into the users table in database 'test'
 
 4) type "npm run dev" to re-initiate the app
 
 5) open your browser to localhost:(the value of the PORT variable defined in config/.env)
 
-6) login with user Test Test, user name = 't_test' and password = 'password'
+6) login with user Admin User, user name = 'a_user' and password = 'password' or Regular User user name='r_user' password='password'
+
+7) once logged in you can select 'Admin' from the dropdown menu that will only allow Admin User to login
 
 ## Current Abilities
 1) able to sign in and pass sign in info to next page through routes, a database query and handlebars variables

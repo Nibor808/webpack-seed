@@ -1,0 +1,26 @@
+<div class="row">
+  {{#unless loggedIn}}
+    {{> admin-login-form}}
+  {{/unless}}
+  {{#if loggedIn}}
+    <div class="admin-wrapper">
+      <p>Welcome: <strong>{{name}}</strong></p>
+      <table>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>User Name</th>
+          <th>Permission</th>
+        </tr>
+        {{#each data}}
+          <tr>
+            <td>{{firstName}}</td>
+            <td>{{lastName}}</td>
+            <td>{{userName}}</td>
+            <td>{{permission}}</td>
+          </tr>
+        {{/each}}
+      </table>
+    </div>
+  {{/if}}
+</div>

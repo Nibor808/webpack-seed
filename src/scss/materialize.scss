@@ -43,17 +43,22 @@
 $image-path : "../images";
 $background-color: #F7F9FA;
 $logo-color: #915AA3;
-$primary-color: #A1D490;
+$nav-color: #A1D490;
 $button-color: #FFF;
 $button-backgorund-color: #90C3D4;
+$font-color: #4F4F4F;
 
 body {
   background-color: $background-color;
   color: #444;
 }
 
+p {
+  color: $font-color;
+}
+
 .nav-wrapper {
-  background-color: $primary-color;
+  background-color: $nav-color;
   padding-left: 20px;
   padding-right: 20px;
 
@@ -66,8 +71,20 @@ body {
   }
 }
 
+.container {
+  height: 100%;
+}
+
 .btn {
   color: $button-color;
   background-color: $button-backgorund-color;
   text-transform: none;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
 }

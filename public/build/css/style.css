@@ -6396,6 +6396,9 @@ body {
   background-color: #F7F9FA;
   color: #444; }
 
+p {
+  color: #4F4F4F; }
+
 .nav-wrapper {
   background-color: #A1D490;
   padding-left: 20px;
@@ -6405,9 +6408,19 @@ body {
   .nav-wrapper .dropdown-content > li > a {
     color: #915AA3; }
 
+.container {
+  height: 100%; }
+
 .btn, .btn-large {
   color: #FFF;
   background-color: #90C3D4;
   text-transform: none; }
+
+.footer {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  width: 100%; }
 
 /*# sourceMappingURL=style.css.map*/

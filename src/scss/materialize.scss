@@ -79,14 +79,14 @@ p {
   height: 100%;
 }
 
-.btn {
+.btn, .btn-floating {
   color: $button-color;
   background-color: $button-backgorund-color;
   text-transform: none;
 }
 
 .footer {
-  position: fixed;
+  margin-top: 100px;
   bottom: 0px;
   left: 0px;
   right: 0px;

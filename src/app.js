@@ -36,6 +36,7 @@ app.set('view engine', '.hbs');
 require('routes/root')(app);
 require('routes/session')(app);
 require('routes/admin')(app);
+require('routes/user')(app);
 
 
 

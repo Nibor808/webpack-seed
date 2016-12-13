@@ -1,4 +1,4 @@
-import {create, readWhere, read, update, del} from '../utils/crud';
+import knex from '../utils/db';
 
 module.exports = (app) => {
 
@@ -6,7 +6,7 @@ module.exports = (app) => {
     if(req.session.adminName == undefined) {
       res.render('oops', {admin: true});
     }else {
-      read('users')
+      knex('users').select()
         .then((data) => {
           res.render('users', {
             data: data,

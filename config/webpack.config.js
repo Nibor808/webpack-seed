@@ -21,6 +21,9 @@ module.exports = {
       {test: /\.json$/, loader: 'json'}
     ]
   },
+  resolve: {
+    extensions: ['', '.js']
+  },
   plugins: [
     new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js'),
     new ETPlugin('./css/style.css')

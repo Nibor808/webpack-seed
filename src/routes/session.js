@@ -1,4 +1,5 @@
-import {readWhere} from '../utils/crud';
+import knex from '../utils/db';
+import bcrypt from 'bcrypt';
 
 module.exports = (app) => {
 
@@ -7,9 +8,9 @@ module.exports = (app) => {
     if (!user.userName || !user.password) {
       res.render('login', {error: 'you are missing some info'});
     }else {
-      readWhere('users', {userName: user.userName})
+      knex('users').where({userName: user.userName})
         .then((data) => {
-          if(data.length == 0 || data[0].password != user.password) {
+          if(data.length == 0 || !bcrypt.compareSync(user.password, data[0].password)) {
             res.render('login', {error: 'incorrect user name or password'});
           }else {
             let isAdmin;

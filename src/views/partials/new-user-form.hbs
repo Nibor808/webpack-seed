@@ -1,0 +1,54 @@
+<form action="/user/create" method="POST" class="col s6 offset-s3" id="new-user-form">
+  <div class="row">
+    <div class="input-field">
+      {{#if fName}}
+        <input placeholder="first name" id="firstName" type="text" name=user[firstName] value={{fName}}>
+      {{else}}
+        <input placeholder="first name" id="firstName" type="text" name=user[firstName]>
+      {{/if}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field">
+      {{#if lName}}
+        <input placeholder="last name" id="lastName" type="text" name=user[lastName] value={{lName}}>
+      {{else}}
+        <input placeholder="last name" id="lastName" type="text" name=user[lastName]>
+      {{/if}}
+    </div>
+  </div>
+   <div class="row">
+    <div class="input-field">
+      {{#if uName}}
+        <input placeholder="user name" id="userName" type="text" name=user[userName] value={{uName}}>
+      {{else}}
+        <input placeholder="user name" id="userName" type="text" name=user[userName]>
+      {{/if}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field">
+      <select name=user[permission] id="permission">
+        <option value="" disabled selected>level</option>
+        <option value="0">0 - admin</option>
+        <option value="1">1 - user</option>
+      </select>
+      <label>Permission</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field">
+      <input placeholder="password" id="password" type="password" class="validate" name=user[password]>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field">
+      <input placeholder="confirm password" id="passwordConfirm" type="password" class="validate" name=user[passwordConfirm]>
+    </div>
+  </div>
+  <button class="btn waves-effect waves-light" type="submit" name="action">submit</button>
+  <label id="error"></label>
+  {{#if error}}
+    <label>{{error}}</label>
+  {{/if}}
+</form>

@@ -37,4 +37,6 @@
 
 2) able to sign in as admin user to view all users
 
+3) able to add new users through admin
+
 

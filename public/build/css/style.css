@@ -6414,13 +6414,13 @@ p {
 .container {
   height: 100%; }
 
-.btn, .btn-large {
+.btn, .btn-large, .btn-floating {
   color: #FFF;
   background-color: #90C3D4;
   text-transform: none; }
 
 .footer {
-  position: fixed;
+  margin-top: 100px;
   bottom: 0px;
   left: 0px;
   right: 0px;

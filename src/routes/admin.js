@@ -2,7 +2,7 @@ import {create, readWhere, read, update, del} from '../utils/crud';
 
 module.exports = (app) => {
 
-  app.get('/adminUsers', (req, res) => {
+  app.get('/admin/users', (req, res) => {
     if(req.session.adminName == undefined) {
       res.render('oops', {admin: true});
     }else {

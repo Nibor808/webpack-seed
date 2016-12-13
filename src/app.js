@@ -8,14 +8,21 @@ env('./config/.env', {logger: console});
 
 const app = express();
 
+const sess = {
+  secret: process.env.SESSION_SECRET,
+  resave: false,
+  saveUninitialized: true,
+  cookie: {}
+};
+
+if (app.get('env') === 'production') {
+  sess.cookie.secure = true;
+}
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(express.static(`${__dirname}/../public`));
-app.use(session({
-  secret: process.env.SESSION_SECRET,
-  resave: false,
-  saveUninitialized: true
-}));
+app.use(session(sess));
 
 app.set('views', `${__dirname}/views`);
 app.engine('.hbs', exhbs({

@@ -1,5 +1,6 @@
 #!/bin/bash
 
+export NODE_ENV=development
 export NODE_PATH=src/
 
 DEV_SERVER_CMD="babel-node --harmony src/app.js"
